@@ -1,0 +1,67 @@
+2021-05-22 21:57:34.381 +07 [20124] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-22 21:57:34.387 +07 [20124] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-22 21:57:34.388 +07 [20124] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-22 21:57:34.447 +07 [29620] LOG:  database system was interrupted; last known up at 2021-05-04 23:08:36 +07
+2021-05-22 21:57:34.869 +07 [29620] LOG:  database system was not properly shut down; automatic recovery in progress
+2021-05-22 21:57:34.873 +07 [29620] LOG:  redo starts at 0/1698490
+2021-05-22 21:57:34.873 +07 [29620] LOG:  invalid record length at 0/16984C8: wanted 24, got 0
+2021-05-22 21:57:34.873 +07 [29620] LOG:  redo done at 0/1698490
+2021-05-22 21:57:34.937 +07 [20124] LOG:  database system is ready to accept connections
+2021-05-22 21:57:46.267 +07 [16068] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 21:58:48.744 +07 [28796] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 22:07:04.063 +07 [21216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 22:07:19.592 +07 [460] ERROR:  table "user2s" does not exist
+2021-05-22 22:07:19.592 +07 [460] STATEMENT:  drop table User2s
+	;
+2021-05-22 22:07:34.787 +07 [460] ERROR:  table "user2" does not exist
+2021-05-22 22:07:34.787 +07 [460] STATEMENT:  drop table User2;
+2021-05-22 22:07:50.613 +07 [460] ERROR:  syntax error at or near "s" at character 1
+2021-05-22 22:07:50.613 +07 [460] STATEMENT:  s
+	drop table "User2s";
+2021-05-22 22:08:09.470 +07 [460] ERROR:  table "user2" does not exist
+2021-05-22 22:08:09.470 +07 [460] STATEMENT:  drop table User2;
+2021-05-22 22:08:39.441 +07 [460] ERROR:  table "user2s" does not exist
+2021-05-22 22:08:39.441 +07 [460] STATEMENT:  drop table User2s;
+2021-05-22 22:08:52.935 +07 [460] ERROR:  table "user2" does not exist
+2021-05-22 22:08:52.935 +07 [460] STATEMENT:  drop table User2;
+2021-05-22 22:24:55.182 +07 [20124] LOG:  received fast shutdown request
+2021-05-22 22:24:55.190 +07 [20124] LOG:  aborting any active transactions
+2021-05-22 22:24:55.190 +07 [460] FATAL:  terminating connection due to administrator command
+2021-05-22 22:24:55.200 +07 [24660] ERROR:  canceling statement due to user request
+2021-05-22 22:24:55.215 +07 [20124] LOG:  background worker "logical replication launcher" (PID 24660) exited with exit code 1
+2021-05-22 22:24:55.225 +07 [17540] LOG:  shutting down
+2021-05-22 22:24:55.269 +07 [20124] LOG:  database system is shut down
+2021-05-22 22:30:53.521 +07 [24236] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-22 22:30:53.528 +07 [24236] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-22 22:30:53.528 +07 [24236] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-22 22:30:53.689 +07 [26320] LOG:  database system was shut down at 2021-05-22 22:24:55 +07
+2021-05-22 22:30:53.764 +07 [24236] LOG:  database system is ready to accept connections
+2021-05-22 22:42:17.752 +07 [4972] ERROR:  syntax error at or near "users" at character 10
+2021-05-22 22:42:17.752 +07 [4972] STATEMENT:  select * users;
+2021-05-22 23:00:53.118 +07 [20040] ERROR:  database "sequelize_db" is being accessed by other users
+2021-05-22 23:00:53.118 +07 [20040] DETAIL:  There is 1 other session using the database.
+2021-05-22 23:00:53.118 +07 [20040] STATEMENT:  DROP DATABASE IF EXISTS "sequelize_db"
+2021-05-22 23:00:53.124 +07 [20040] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:01:04.170 +07 [27616] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:01:31.132 +07 [9164] FATAL:  database "sequelize_db" does not exist
+2021-05-22 23:01:41.325 +07 [1640] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:01:44.988 +07 [26812] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:08:26.015 +07 [18224] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:12:19.943 +07 [13904] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:12:30.493 +07 [16724] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-22 23:14:26.591 +07 [24236] LOG:  received fast shutdown request
+2021-05-22 23:14:26.597 +07 [24236] LOG:  aborting any active transactions
+2021-05-22 23:14:26.606 +07 [7360] ERROR:  canceling statement due to user request
+2021-05-22 23:14:26.626 +07 [24236] LOG:  background worker "logical replication launcher" (PID 7360) exited with exit code 1
+2021-05-22 23:14:26.640 +07 [24220] LOG:  shutting down
+2021-05-22 23:14:26.679 +07 [24236] LOG:  database system is shut down
