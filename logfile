@@ -65,3 +65,32 @@
 2021-05-22 23:14:26.626 +07 [24236] LOG:  background worker "logical replication launcher" (PID 7360) exited with exit code 1
 2021-05-22 23:14:26.640 +07 [24220] LOG:  shutting down
 2021-05-22 23:14:26.679 +07 [24236] LOG:  database system is shut down
+2021-05-23 06:30:36.420 +07 [28904] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-23 06:30:36.429 +07 [28904] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-23 06:30:36.429 +07 [28904] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-23 06:30:36.534 +07 [26844] LOG:  database system was shut down at 2021-05-22 23:14:26 +07
+2021-05-23 06:30:36.621 +07 [28904] LOG:  database system is ready to accept connections
+2021-05-23 06:30:43.205 +07 [24544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:31:36.674 +07 [28904] LOG:  received fast shutdown request
+2021-05-23 06:31:36.680 +07 [28904] LOG:  aborting any active transactions
+2021-05-23 06:31:36.718 +07 [9188] ERROR:  canceling statement due to user request
+2021-05-23 06:31:36.740 +07 [28904] LOG:  background worker "logical replication launcher" (PID 9188) exited with exit code 1
+2021-05-23 06:31:36.758 +07 [13996] LOG:  shutting down
+2021-05-23 06:31:36.806 +07 [28904] LOG:  database system is shut down
+2021-05-23 06:32:03.477 +07 [15372] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-23 06:32:03.485 +07 [15372] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-23 06:32:03.486 +07 [15372] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-23 06:32:03.569 +07 [28148] LOG:  database system was shut down at 2021-05-23 06:31:36 +07
+2021-05-23 06:32:03.670 +07 [15372] LOG:  database system is ready to accept connections
+2021-05-23 06:32:08.910 +07 [8008] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:32:18.061 +07 [13832] FATAL:  password authentication failed for user "postgresa"
+2021-05-23 06:32:18.061 +07 [13832] DETAIL:  Role "postgresa" does not exist.
+	Connection matched pg_hba.conf line 88: "host    all             all             ::1/128                 scram-sha-256"
+2021-05-23 06:32:21.419 +07 [15372] LOG:  received fast shutdown request
+2021-05-23 06:32:21.426 +07 [15372] LOG:  aborting any active transactions
+2021-05-23 06:32:21.443 +07 [29424] ERROR:  canceling statement due to user request
+2021-05-23 06:32:21.461 +07 [15372] LOG:  background worker "logical replication launcher" (PID 29424) exited with exit code 1
+2021-05-23 06:32:21.478 +07 [20848] LOG:  shutting down
+2021-05-23 06:32:21.544 +07 [15372] LOG:  database system is shut down
