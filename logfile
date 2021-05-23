@@ -211,3 +211,14 @@
 2021-05-23 07:48:27.333 +07 [17888] LOG:  background worker "logical replication launcher" (PID 11840) exited with exit code 1
 2021-05-23 07:48:27.347 +07 [28264] LOG:  shutting down
 2021-05-23 07:48:27.393 +07 [17888] LOG:  database system is shut down
+2021-05-23 11:46:37.201 +07 [11448] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-23 11:46:37.206 +07 [11448] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-23 11:46:37.207 +07 [11448] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-23 11:46:37.264 +07 [9972] LOG:  database system was shut down at 2021-05-23 07:48:27 +07
+2021-05-23 11:46:37.320 +07 [11448] LOG:  database system is ready to accept connections
+2021-05-23 11:57:51.807 +07 [29080] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 11:58:29.283 +07 [19236] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 11:59:22.231 +07 [28760] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

@@ -4,6 +4,7 @@ const { sequelize, User, Post } = require('./models')
 
 app.use(express.json())
 
+// user
 app.post('/users', async (req, res) => {
   const { name, email, role } = req.body
 
@@ -29,7 +30,10 @@ app.get('/users', async (req, res) => {
 app.get('/users/:id', async (req, res) => {
   const { id } = req.params
   try {
-    const user = await User.findOne({ where: { id } })
+    const user = await User.findOne({
+      where: { id },
+      include: [{ model: Post, as: 'post' }],
+    })
     return res.json(user)
   } catch (err) {
     console.error(err.message)
@@ -37,6 +41,7 @@ app.get('/users/:id', async (req, res) => {
   }
 })
 
+// post
 app.post('/posts', async (req, res) => {
   const { userUuid, body } = req.body
 
@@ -48,6 +53,17 @@ app.post('/posts', async (req, res) => {
     return res.json(post)
   } catch (err) {
     console.log(err.message)
+    return res.status(500).json(err)
+  }
+})
+
+app.get('/posts', async (req, res) => {
+  try {
+    const posts = await Post.findAll({ include: [{ model: User, as: 'user' }] }) //include berfungsi untuk join table User dan Post. kalau tidak diberi include maka akan menarik semua Post yang ada tanpa join table. // as user berfungsi untuk mengganti nama kolom di response menjadi 'user'
+
+    return res.json(posts)
+  } catch (err) {
+    console.log(err)
     return res.status(500).json(err)
   }
 })
