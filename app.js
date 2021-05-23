@@ -41,6 +41,37 @@ app.get('/users/:id', async (req, res) => {
   }
 })
 
+app.delete('/users/:id', async (req, res) => {
+  const { id } = req.params
+  try {
+    const user = await User.findOne({ where: { id } })
+    await user.destroy()
+
+    return res.json({ message: 'user deleted!' })
+  } catch (err) {
+    console.error(err.message)
+    return res.status(500).json(err.message)
+  }
+})
+
+app.put('/users/:id', async (req, res) => {
+  const { id } = req.params
+  const { name, email } = req.body
+  try {
+    const user = await User.findOne({ where: { id } })
+
+    user.name = name
+    user.email = email
+
+    await user.save()
+
+    return res.json({ message: 'user updated!' })
+  } catch (err) {
+    console.error(err.message)
+    return res.status(500).json(err.message)
+  }
+})
+
 // post
 app.post('/posts', async (req, res) => {
   const { userUuid, body } = req.body
