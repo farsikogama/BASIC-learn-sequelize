@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const { sequelize, User } = require('./models')
+const { sequelize, User, Post } = require('./models')
 
 app.use(express.json())
 
@@ -34,6 +34,21 @@ app.get('/users/:id', async (req, res) => {
   } catch (err) {
     console.error(err.message)
     return res.status(500).json(err.message)
+  }
+})
+
+app.post('/posts', async (req, res) => {
+  const { userUuid, body } = req.body
+
+  try {
+    const user = await User.findOne({ where: { uuid: userUuid } })
+
+    const post = await Post.create({ body, userId: user.id })
+
+    return res.json(post)
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json(err)
   }
 })
 

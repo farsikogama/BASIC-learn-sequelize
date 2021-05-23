@@ -94,3 +94,120 @@
 2021-05-23 06:32:21.461 +07 [15372] LOG:  background worker "logical replication launcher" (PID 29424) exited with exit code 1
 2021-05-23 06:32:21.478 +07 [20848] LOG:  shutting down
 2021-05-23 06:32:21.544 +07 [15372] LOG:  database system is shut down
+2021-05-23 06:32:37.766 +07 [24112] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-23 06:32:37.775 +07 [24112] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-23 06:32:37.775 +07 [24112] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-23 06:32:37.872 +07 [17072] LOG:  database system was shut down at 2021-05-23 06:32:21 +07
+2021-05-23 06:32:37.993 +07 [24112] LOG:  database system is ready to accept connections
+2021-05-23 06:38:52.628 +07 [4020] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:41:30.912 +07 [15364] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:42:13.543 +07 [28276] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:45:09.667 +07 [27216] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:49:58.397 +07 [28544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:50:04.567 +07 [26788] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:54:05.107 +07 [8360] ERROR:  column "userId" does not exist at character 73
+2021-05-23 06:54:05.107 +07 [8360] STATEMENT:  SELECT "id", "uuid", "name", "email", "role", "createdAt", "updatedAt", "userId" FROM "users" AS "User" WHERE "User"."id" = '2';
+2021-05-23 06:55:31.469 +07 [29080] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:55:34.109 +07 [20744] ERROR:  column "userId" does not exist at character 73
+2021-05-23 06:55:34.109 +07 [20744] STATEMENT:  SELECT "id", "uuid", "name", "email", "role", "createdAt", "updatedAt", "userId" FROM "users" AS "User" WHERE "User"."id" = '2';
+2021-05-23 06:56:22.758 +07 [19536] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:56:24.551 +07 [12448] ERROR:  column "userId" does not exist at character 73
+2021-05-23 06:56:24.551 +07 [12448] STATEMENT:  SELECT "id", "uuid", "name", "email", "role", "createdAt", "updatedAt", "userId" FROM "users" AS "User" WHERE "User"."id" = '2';
+2021-05-23 06:56:51.614 +07 [24112] LOG:  received fast shutdown request
+2021-05-23 06:56:51.624 +07 [24112] LOG:  aborting any active transactions
+2021-05-23 06:56:51.666 +07 [12704] ERROR:  canceling statement due to user request
+2021-05-23 06:56:51.671 +07 [17216] FATAL:  terminating connection due to administrator command
+2021-05-23 06:56:51.672 +07 [24112] LOG:  background worker "logical replication launcher" (PID 12704) exited with exit code 1
+2021-05-23 06:56:51.697 +07 [6104] LOG:  shutting down
+2021-05-23 06:56:51.770 +07 [24112] LOG:  database system is shut down
+2021-05-23 06:57:17.772 +07 [17888] LOG:  starting PostgreSQL 13.2, compiled by Visual C++ build 1914, 64-bit
+2021-05-23 06:57:17.780 +07 [17888] LOG:  listening on IPv6 address "::1", port 5432
+2021-05-23 06:57:17.781 +07 [17888] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-05-23 06:57:17.860 +07 [27376] LOG:  database system was shut down at 2021-05-23 06:56:51 +07
+2021-05-23 06:57:17.939 +07 [17888] LOG:  database system is ready to accept connections
+2021-05-23 06:57:24.533 +07 [24048] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:57:32.872 +07 [29324] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 06:58:10.703 +07 [528] ERROR:  column "userId" does not exist at character 73
+2021-05-23 06:58:10.703 +07 [528] STATEMENT:  SELECT "id", "uuid", "name", "email", "role", "createdAt", "updatedAt", "userId" FROM "users" AS "User" WHERE "User"."id" = '2';
+2021-05-23 07:00:54.604 +07 [24384] ERROR:  syntax error at or near "'
+	;
+	select * from users'" at character 20
+2021-05-23 07:00:54.604 +07 [24384] STATEMENT:  select * from users'
+	;
+	select * from users';
+2021-05-23 07:01:53.500 +07 [6596] ERROR:  column "userId" does not exist at character 184
+2021-05-23 07:01:53.500 +07 [6596] STATEMENT:  INSERT INTO "users" ("id","uuid","name","email","role","createdAt","updatedAt") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6) RETURNING "id","uuid","name","email","role","createdAt","updatedAt","userId";
+2021-05-23 07:03:18.282 +07 [29044] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:03:34.789 +07 [29312] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:03:40.470 +07 [18608] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:03:44.667 +07 [27676] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:05:37.183 +07 [29504] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:05:37.183 +07 [29504] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:06:54.989 +07 [22560] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:06:54.989 +07 [22560] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:07:13.908 +07 [23656] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:07:13.908 +07 [23656] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:09:38.580 +07 [27704] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:09:38.580 +07 [27704] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:13:03.030 +07 [23176] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:13:03.030 +07 [23176] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:19:08.202 +07 [12468] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:19:12.523 +07 [22780] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:19:33.677 +07 [4308] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:19:38.607 +07 [26804] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:21:18.001 +07 [12844] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:21:18.001 +07 [12844] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:21:59.828 +07 [14872] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:21:59.828 +07 [14872] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:22:30.919 +07 [27000] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:22:30.919 +07 [27000] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:24:35.291 +07 [28500] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:24:35.291 +07 [28500] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:24:38.799 +07 [28500] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:24:45.269 +07 [16244] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:24:51.485 +07 [19928] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:25:32.628 +07 [29120] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:25:32.628 +07 [29120] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:30:01.218 +07 [10472] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:30:01.218 +07 [10472] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:34:36.556 +07 [25884] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:34:36.556 +07 [25884] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:36:53.871 +07 [23356] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:36:53.871 +07 [23356] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:38:08.362 +07 [4696] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:38:08.362 +07 [4696] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:45:29.470 +07 [25968] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:45:29.470 +07 [25968] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:45:46.305 +07 [20976] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:45:49.130 +07 [16236] ERROR:  relation "post" does not exist at character 13
+2021-05-23 07:45:49.130 +07 [16236] STATEMENT:  INSERT INTO "post" ("id","uuid","body","createdAt","updatedAt","userId") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING "id","uuid","body","createdAt","updatedAt","userId";
+2021-05-23 07:47:46.001 +07 [12544] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 07:48:27.308 +07 [17888] LOG:  received fast shutdown request
+2021-05-23 07:48:27.311 +07 [17888] LOG:  aborting any active transactions
+2021-05-23 07:48:27.325 +07 [11840] ERROR:  canceling statement due to user request
+2021-05-23 07:48:27.333 +07 [17888] LOG:  background worker "logical replication launcher" (PID 11840) exited with exit code 1
+2021-05-23 07:48:27.347 +07 [28264] LOG:  shutting down
+2021-05-23 07:48:27.393 +07 [17888] LOG:  database system is shut down
