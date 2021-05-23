@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
-const { sequelize, User } = require('./models')
+const { sequelize, User, Post } = require('./models')
 
 app.use(express.json())
 
+// user
 app.post('/users', async (req, res) => {
   const { name, email, role } = req.body
 
@@ -18,7 +19,7 @@ app.post('/users', async (req, res) => {
 
 app.get('/users', async (req, res) => {
   try {
-    const users = await User.findAll()
+    const users = await User.findAll({ include: 'post' }) // bentuk singkat dari {include : [{mode : User, as :'user'}]}
     return res.json(users)
   } catch (err) {
     console.error(err.message)
@@ -29,11 +30,72 @@ app.get('/users', async (req, res) => {
 app.get('/users/:id', async (req, res) => {
   const { id } = req.params
   try {
-    const user = await User.findOne({ where: { id } })
+    const user = await User.findOne({
+      where: { id },
+      include: [{ model: Post, as: 'post' }],
+    })
     return res.json(user)
   } catch (err) {
     console.error(err.message)
     return res.status(500).json(err.message)
+  }
+})
+
+app.delete('/users/:id', async (req, res) => {
+  const { id } = req.params
+  try {
+    const user = await User.findOne({ where: { id } })
+    await user.destroy()
+
+    return res.json({ message: 'user deleted!' })
+  } catch (err) {
+    console.error(err.message)
+    return res.status(500).json(err.message)
+  }
+})
+
+app.put('/users/:id', async (req, res) => {
+  const { id } = req.params
+  const { name, email } = req.body
+  try {
+    const user = await User.findOne({ where: { id } })
+
+    user.name = name
+    user.email = email
+
+    await user.save()
+
+    return res.json({ message: 'user updated!' })
+  } catch (err) {
+    console.error(err.message)
+    return res.status(500).json(err.message)
+  }
+})
+
+// post
+app.post('/posts', async (req, res) => {
+  const { userUuid, body } = req.body
+
+  try {
+    const user = await User.findOne({ where: { uuid: userUuid } })
+
+    const post = await Post.create({ body, userId: user.id })
+
+    return res.json(post)
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json(err)
+  }
+})
+
+app.get('/posts', async (req, res) => {
+  try {
+    const posts = await Post.findAll({ include: [{ model: User, as: 'user' }] }) //include berfungsi untuk join table User dan Post. kalau tidak diberi include maka akan menarik semua Post yang ada tanpa join table. // as user berfungsi untuk mengganti nama kolom di response menjadi 'user'
+
+    return res.json(posts)
+  } catch (err) {
+    console.log(err)
+    return res.status(500).json(err)
   }
 })
 
