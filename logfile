@@ -242,3 +242,18 @@
 	
 2021-05-23 12:20:34.576 +07 [27200] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
 	
+2021-05-23 12:27:14.172 +07 [29088] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 12:28:50.301 +07 [28572] ERROR:  syntax error at or near "users" at character 8
+2021-05-23 12:28:50.301 +07 [28572] STATEMENT:  delete users
+	;
+2021-05-23 12:28:53.556 +07 [28572] ERROR:  syntax error at or near "users" at character 8
+2021-05-23 12:28:53.556 +07 [28572] STATEMENT:  delete users;
+2021-05-23 12:31:32.481 +07 [12788] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 12:32:02.216 +07 [28404] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 12:32:18.550 +07 [18484] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-05-23 12:32:23.678 +07 [9504] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
