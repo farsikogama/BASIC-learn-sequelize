@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate({ User }) {
       // define association here
-      this.belongsTo(User, { foreignKey: 'userId', as: 'user' }) // as user berfungsi untuk mengganti nama kolom di response menjadi 'user'
+      this.belongsTo(User, { foreignKey: 'userId', as: 'user' }) // as user berfungsi untuk mengganti nama kolom di response menjadi 'user'.
     }
 
     toJSON() {
