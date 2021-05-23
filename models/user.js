@@ -24,14 +24,30 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          // untuk validasi input
+          notNull: { msg: 'User must have a name' },
+          notEmpty: { msg: 'name cannot be empty' },
+        },
       },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          // untuk validasi input
+          notNull: { msg: 'User must have an email' },
+          notEmpty: { msg: 'email cannot be empty' },
+          isEmail: { msg: 'Must be a vald email address' },
+        },
       },
       role: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          // untuk validasi input
+          notNull: { msg: 'User must have a role' },
+          notEmpty: { msg: 'role cannot be empty' },
+        },
       },
     },
     {

@@ -19,7 +19,7 @@ app.post('/users', async (req, res) => {
 
 app.get('/users', async (req, res) => {
   try {
-    const users = await User.findAll()
+    const users = await User.findAll({ include: 'post' }) // bentuk singkat dari {include : [{mode : User, as :'user'}]}
     return res.json(users)
   } catch (err) {
     console.error(err.message)
